@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Application/bin/Debug/net8.0
+/.vs/Clinic/FileContentIndex
+/Application/obj
+/Clicic/bin/Debug/net8.0
+/Clicic/obj
+/Clicic/Properties
+/Core/bin/Debug/net8.0
+/Core/obj
+/Infrastructure/bin/Debug/net8.0
+/Infrastructure/obj
+*.http
+*.user
