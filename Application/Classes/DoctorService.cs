@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces.Repositories.Base;
 using Infrastructure.Interfaces.Doctors;
+using Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,9 @@ namespace Application.Classes
         {
             unitOfWork = _unitOfWork;
         }
-        public async Task<List<object>> GetDoctors()
+        public async Task<List<TbClinic>> GetDoctors()
         {
-            return await unitOfWork.Repository<object>().FindAll().ToListAsync();
+            return await unitOfWork.Repository<TbClinic>().FindAll().ToListAsync();
         }
     }
 }

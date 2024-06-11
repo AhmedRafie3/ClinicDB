@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Interfaces.Doctors;
+using Infrastructure.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +17,7 @@ namespace Clinic.Controllers
         }
 
         [HttpGet]
-        public Task<List<object>> GetDoctors()
+        public Task<List<TbClinic>> GetDoctors()
         {
            return _doctorService.GetDoctors();
         }
