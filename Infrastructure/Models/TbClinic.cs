@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Infrastructure.Models;
+
+public partial class TbClinic
+{
+    public int Id { get; set; }
+
+    public int? OrganizationId { get; set; }
+
+    public int SpecialityId { get; set; }
+
+    public string BrandName { get; set; } = null!;
+
+    public string Address { get; set; } = null!;
+
+    public string Phone { get; set; } = null!;
+
+    public string Email { get; set; } = null!;
+
+    public string Bio { get; set; } = null!;
+
+    public string? ImageKey { get; set; }
+
+    public bool ActivationStatus { get; set; }
+
+    public byte[] DateCreated { get; set; } = null!;
+
+    public virtual TbOrganization? Organization { get; set; }
+
+    public virtual TbStaticDatum Speciality { get; set; } = null!;
+
+    public virtual ICollection<TbClinicService> TbClinicServices { get; set; } = new List<TbClinicService>();
+
+    public virtual ICollection<TbClinicStaff> TbClinicStaffs { get; set; } = new List<TbClinicStaff>();
+
+    public virtual ICollection<TbClinicWaiting> TbClinicWaitings { get; set; } = new List<TbClinicWaiting>();
+
+    public virtual ICollection<TbMedicalRecord> TbMedicalRecords { get; set; } = new List<TbMedicalRecord>();
+
+    public virtual ICollection<TbReservationGuide> TbReservationGuides { get; set; } = new List<TbReservationGuide>();
+
+    public virtual ICollection<TbReservation> TbReservations { get; set; } = new List<TbReservation>();
+
+    public virtual ICollection<TbReview> TbReviews { get; set; } = new List<TbReview>();
+}

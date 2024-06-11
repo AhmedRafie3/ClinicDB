@@ -1,5 +1,4 @@
-﻿using Infrastructure.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +8,6 @@ namespace Infrastructure.Interfaces.Doctors
 {
     public interface IDoctorService
     {
-        Task<List<TbClinic>> GetDoctors();
+        Task<List<object>> GetDoctors();
     }
 }
