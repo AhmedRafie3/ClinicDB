@@ -1,5 +1,5 @@
 ﻿using Application.Classes;
-using Application.Interfaces.Repositories.Base;
+using Application.Repository.IBase;
 using Infrastructure.Interfaces.Doctors;
 using Infrastructure.Repositories.Base;
 using Microsoft.EntityFrameworkCore;

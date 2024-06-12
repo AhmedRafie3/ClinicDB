@@ -1,4 +1,4 @@
-﻿using Application.Interfaces.Repositories.Base;
+﻿using Application.Repository.IBase;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
