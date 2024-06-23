@@ -17,6 +17,12 @@ namespace Application.Classes
         {
             unitOfWork = _unitOfWork;
         }
+
+        public Task<List<TbClinic>> AddDoctors()
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<List<TbClinic>> GetDoctors()
         {
             return await unitOfWork.Repository<TbClinic>().FindAll().ToListAsync();

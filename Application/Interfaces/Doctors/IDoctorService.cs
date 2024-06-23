@@ -10,5 +10,6 @@ namespace Infrastructure.Interfaces.Doctors
     public interface IDoctorService
     {
         Task<List<TbClinic>> GetDoctors();
+        Task<List<TbClinic>> AddDoctors();
     }
 }

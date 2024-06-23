@@ -15,6 +15,11 @@ namespace Clinic.Controllers
         {
             _doctorService = doctorService;
         }
+        [HttpPost]
+        public Task<List<TbClinic>> AddDoctors()
+        {
+            throw new NotImplementedException();
+        }
 
         [HttpGet]
         public Task<List<TbClinic>> GetDoctors()

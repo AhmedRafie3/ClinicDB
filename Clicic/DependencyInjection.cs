@@ -1,4 +1,6 @@
 ﻿using Application.Classes;
+using Application.Classes.Organization;
+using Application.Interfaces.Organization;
 using Application.Repository.IBase;
 using Infrastructure.Interfaces.Doctors;
 using Infrastructure.Repositories.Base;
@@ -45,6 +47,7 @@ namespace Infrastructure
         private static void AddRepo(this IServiceCollection services)
         {
             services.AddScoped<IDoctorService, DoctorService>();
+            services.AddScoped<IOrganizationService, OrganizationService>();
         }
 
        
