@@ -1,4 +1,4 @@
-﻿using Infrastructure.Interfaces.Doctors;
+﻿using Application.Interfaces;
 using Infrastructure.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

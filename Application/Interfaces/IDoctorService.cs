@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Interfaces.Doctors
+namespace Application.Interfaces
 {
     public interface IDoctorService
     {

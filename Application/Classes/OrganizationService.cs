@@ -1,4 +1,4 @@
-﻿using Application.Interfaces.Organization;
+﻿using Application.Interfaces;
 using Application.Repository.IBase;
 using Infrastructure.Models;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Classes.Organization
+namespace Application.Classes
 {
     public class OrganizationService : IOrganizationService
     {
@@ -25,10 +25,10 @@ namespace Application.Classes.Organization
             data.ActivationStatus = tbOrganization.ActivationStatus;
             data.OrganizationName = tbOrganization.OrganizationName;
             data.Phone = tbOrganization.Phone;
-            data.Bio=tbOrganization.Bio;
-             _unitOfWork.Repository<TbOrganization>().Create(data);
-           var res=await _unitOfWork.CompleteAsync(cancellationToken);
-            if(res==0) return 0;
+            data.Bio = tbOrganization.Bio;
+            _unitOfWork.Repository<TbOrganization>().Create(data);
+            var res = await _unitOfWork.CompleteAsync(cancellationToken);
+            if (res == 0) return 0;
             else return 1;
         }
 

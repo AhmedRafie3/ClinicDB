@@ -1,8 +1,6 @@
 ﻿using Application.Classes;
-using Application.Classes.Organization;
-using Application.Interfaces.Organization;
+using Application.Interfaces;
 using Application.Repository.IBase;
-using Infrastructure.Interfaces.Doctors;
 using Infrastructure.Repositories.Base;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -48,6 +46,7 @@ namespace Infrastructure
         {
             services.AddScoped<IDoctorService, DoctorService>();
             services.AddScoped<IOrganizationService, OrganizationService>();
+            services.AddScoped<IUserService, UserService>();
         }
 
        
